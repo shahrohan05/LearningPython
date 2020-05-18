@@ -1,4 +1,4 @@
-# numbers and string data types examples
+# Numbers and string data types examples
 mystring = "hello"
 myfloat = 10.0
 myint = 20
@@ -16,38 +16,40 @@ print()
 print("Escaped String : \n \"Monty Python's Flying Circus\" \n\n")
 print('One more: \n "Monty Python\'s Flying Circus"\n\n')
 
-# a raw string, not treating \n as special.
+# A raw string, not treating \n as special.
 print(r"a row string  - \n \"Monty Python\'s Flying Circus")
 
-print(''' a
-multi line
-string in python ''')
 
-""" 
+# Multiline string, can also be created using single quotes, but double quotes are recommended.
+print(""" a
+multi line
+string in python """)
+
+"""  Useful as Documentation String or docstring for documenting method contracts/purpose
 This is a 
 multiline
 comment.
 """
 
-# two or mote string literals next to each other are automatically concatenated.
-anotherString = "another" " string"
+# Two or mote string literals next to each other are automatically concatenated.
+another_string = "another" " string"
 
-print("\n Another String : "+anotherString)
+print("\n Another String : "+another_string)
 
-print("\n 1st character of another string : "+anotherString[0])
-print(" 1 to 5 character of another string : "+anotherString[0:5])
-print(" 1 to 5 character of another string : "+anotherString[:5])
+print("\n 1st character of another string : "+another_string[0])
+print(" 1 to 5 character of another string : "+another_string[0:5])
+print(" 1 to 5 character of another string : "+another_string[:5])
 
-print(" characters from 5th character of another string : "+anotherString[5:])
+print(" characters from 5th character of another string : "+another_string[5:])
 
-# multiple assignment :
+# Multiple assignment
 a, b, c = 15, 15.5, "hello"
 print(a, b, c)
 
-# string repetition
+# String repetition
 print('Circus Clown, '*3)
 
-# deleting variables: when you are sure you will never need the variable again in the program, or in situations where you can predict you may run out of memory.
+# Deleting variables: when you are sure you will never need the variable again in the program, or in situations where you can predict you may run out of memory.
 del a, b, c
-# this will throw NameError, since variables are deleted and no longer defined.
+# This will throw NameError, since variables are deleted and no longer defined.
 print(a, b, c)
