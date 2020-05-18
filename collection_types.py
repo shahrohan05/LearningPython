@@ -11,6 +11,9 @@ print(strings)
 print(names)
 print("The second name on the names list is %s" % second_name)
 
+print("hello in strings? - %s" %
+      str("hello" in strings))  # in operator for list type
+
 print("\n The slice operator ([ ] and [:]) : ")
 print(numbers[3])
 print(numbers[0:5])
