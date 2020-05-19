@@ -94,7 +94,7 @@ print("[Sum] Total value - ", sum(15, 20))
 1. Can take n number of arguments, but can only return one value in the form of an expression
 2. Cannot be a direct call to print, must return from an expression
 """
-sumOperation = lambda arg1, arg2: arg1+arg2
+def sumOperation(arg1, arg2): return arg1+arg2
 
 
 print("[Sum Lambda] Total value - ", sumOperation(15, 15))
