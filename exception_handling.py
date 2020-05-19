@@ -8,10 +8,10 @@ class SecretFileException(BaseException):
 
 def readfile(filename):
     try:
+        file = open(filename, "r")
         if(filename == "collection_types.py"):
             raise SecretFileException(
                 "Collection types is a secret file, cannot be read from!")
-        file = open(filename, "r")
         print(file.read())
         # j = 5/0  # Will throw ZeroDivisionError
         # print(jam)  # Will throw NameError
@@ -31,7 +31,13 @@ def readfile(filename):
         print(e)
         print("Some unknown error occurred!")
     else:
-        print("\n\nFile read successfully...............")
+        print("\n\n[NO EXCEPTION]File read successfully...............")
+    finally:
+        print("Finally trying to close the file %s." % filename)
+        try:
+            file.close()
+        except Exception as e:
+            print("Error closing the file %s : " % filename, e)
 
 
 readfile(input("File to read from :"))
