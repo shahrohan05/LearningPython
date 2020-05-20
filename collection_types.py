@@ -49,3 +49,23 @@ print(map2)
 print(map2.keys())
 print(map2.values())
 print(map2[16])
+
+# List Comprehension
+l1 = [2, 2, 2, 2]
+l2 = [i*2 for i in l1]
+print(l2)
+
+# Dictionary Comprension
+d1 = {1: "sam", 2: "sam 2"}
+d2 = {k: d1[k].upper() for k in d1.keys()}
+print(d2)
+
+# Sets in Python
+thisset = {"apple", "banana", "cherry"}
+
+thisset.update(["orange", "mango", "banana"])
+
+# Set Comprension
+uppercase_set = {i.upper() for i in thisset}
+print(thisset)
+print(uppercase_set)
