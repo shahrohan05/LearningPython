@@ -1,16 +1,16 @@
 # Python script containing hands on sample code for some basic Python concepts
 import os
-from hands_on_basics.io_sample import io_example
-from hands_on_basics.comparison_sample import comparision_operator
-from hands_on_basics.comparison_sample import number_swap
-from hands_on_basics.arithmatic_sample import arithmatic_operations
-from hands_on_basics.shipping import shipping_problem
+from io_sample import io_example
+from comparison_sample import comparision_operator
+from comparison_sample import number_swap
+from arithmatic_sample import arithmetic_operations
+from shipping import shipping_problem
 
 choices = """
 ============== Python Hands On ==============
 1. IO Example
 2. Comparison Operators
-3. Arithmatic Operations
+3. Arithmetic Operations
 4. Number Swap
 5. Boat Capacity Problem
 6. Exit
@@ -20,9 +20,9 @@ choices = """
 choice_routines = {
     1: io_example,
     2: comparision_operator,
-    3: arithmatic_operations,
+    3: arithmetic_operations,
     4: number_swap,
-    5: shipping_problem()
+    5: shipping_problem
 }
 
 
@@ -43,4 +43,5 @@ def pick_routine():
             pick_routine()
 
 
+print("calling pick routine from basics - ")
 pick_routine()

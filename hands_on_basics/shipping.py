@@ -44,5 +44,3 @@ def shipping_problem():
     shipping_possible(input1, input2)
 
 
-if __name__ == "__main__":
-    shipping_problem()
