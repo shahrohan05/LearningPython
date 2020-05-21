@@ -1,9 +1,10 @@
 # Python script containing hands on sample code for some basic Python concepts
 import os
-from io_sample import io_example
-from comparison_sample import comparision_operator
-from comparison_sample import number_swap
-from arithmatic_sample import arithmatic_operations
+from hands_on_basics.io_sample import io_example
+from hands_on_basics.comparison_sample import comparision_operator
+from hands_on_basics.comparison_sample import number_swap
+from hands_on_basics.arithmatic_sample import arithmatic_operations
+from hands_on_basics.shipping import shipping_problem
 
 choices = """
 ============== Python Hands On ==============
@@ -16,17 +17,12 @@ choices = """
 =============================================
 """
 
-
-def boat_capacity_check():
-    print("--- Boat Capacity Check ---")
-
-
 choice_routines = {
     1: io_example,
     2: comparision_operator,
     3: arithmatic_operations,
     4: number_swap,
-    5: boat_capacity_check
+    5: shipping_problem()
 }
 
 
@@ -34,16 +30,16 @@ def pick_routine():
     os.system("cls" if os.name == "nt" else "clear")  # Clear console
     print(choices)
     choice = input("Your Choice :")
-    if(int(choice) in range(1, 6)):
+    if int(choice) in range(1, 6):
         choice_routines[int(choice)]()
-        if(input("Continue? (yes/no) :").lower() == "yes"):
+        if input("Continue? (yes/no) :").lower() == "yes":
             pick_routine()
 
-    elif(int(choice) == 6):
+    elif int(choice) == 6:
         pass
 
     else:
-        if(input("Invalid Choice! Continue? (yes/no) :").lower() == "yes"):
+        if input("Invalid Choice! Continue? (yes/no) :").lower() == "yes":
             pick_routine()
 
 
