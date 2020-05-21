@@ -1,10 +1,10 @@
 # Python script containing hands on sample code for some basic Python concepts
 import os
-from io_sample import io_example
-from comparison_sample import comparision_operator
-from comparison_sample import number_swap
-from arithmatic_sample import arithmetic_operations
-from shipping import shipping_problem
+from hands_on_basics.io_sample import io_example
+from hands_on_basics.comparison_sample import comparision_operator
+from hands_on_basics.comparison_sample import number_swap
+from hands_on_basics.arithmatic_sample import arithmetic_operations
+from hands_on_basics.shipping import shipping_problem
 
 choices = """
 ============== Python Hands On ==============

@@ -55,7 +55,7 @@ l1 = [2, 2, 2, 2]
 l2 = [i*2 for i in l1]
 print(l2)
 
-# Dictionary Comprension
+# Dictionary Comprehension
 d1 = {1: "sam", 2: "sam 2"}
 d2 = {k: d1[k].upper() for k in d1.keys()}
 print(d2)
@@ -65,7 +65,7 @@ thisset = {"apple", "banana", "cherry"}
 
 thisset.update(["orange", "mango", "banana"])
 
-# Set Comprension
+# Set Comprehension
 uppercase_set = {i.upper() for i in thisset}
 print(thisset)
 print(uppercase_set)
