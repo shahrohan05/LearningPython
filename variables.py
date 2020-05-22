@@ -1,14 +1,14 @@
 # Numbers and string data types examples
-mystring = "hello"
-myfloat = 10.0
-myint = 20
+my_string = "hello"
+my_float = 10.0
+my_int = 20
 
-if mystring == "hello":
-    print("String: %s" % mystring)
-if isinstance(myfloat, float) and myfloat == 10.0:
-    print("Float: %f" % myfloat)
-if isinstance(myint, int) and myint == 20:
-    print("Integer: %d" % myint)
+if my_string == "hello":
+    print("String: %s" % my_string)
+if isinstance(my_float, float) and my_float == 10.0:
+    print("Float: %f" % my_float)
+if isinstance(my_int, int) and my_int == 20:
+    print("Integer: %d" % my_int)
 
 print()
 print()
@@ -20,14 +20,14 @@ print('One more: \n "Monty Python\'s Flying Circus"\n\n')
 print(r"a row string  - \n \"Monty Python\'s Flying Circus")
 
 
-# Multiline string, can also be created using single quotes, but double quotes are recommended.
+# Multi-line string, can also be created using single quotes, but double quotes are recommended.
 print(""" a
 multi line
 string in python """)
 
 """  Useful as Documentation String or docstring for documenting method contracts/purpose
 This is a 
-multiline
+multi-line
 comment.
 """
 
@@ -49,7 +49,8 @@ print(a, b, c)
 # String repetition
 print('Circus Clown, '*3)
 
-# Deleting variables: when you are sure you will never need the variable again in the program, or in situations where you can predict you may run out of memory.
+# Deleting variables: when you are sure you will never need the variable again in the program, or in situations where
+# you can predict you may run out of memory.
 del a, b, c
 # This will throw NameError, since variables are deleted and no longer defined.
 print(a, b, c)
