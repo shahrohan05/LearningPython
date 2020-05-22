@@ -3,7 +3,7 @@ import os
 from hands_on_basics.io_sample import io_example
 from hands_on_basics.comparison_sample import comparision_operator
 from hands_on_basics.comparison_sample import number_swap
-from hands_on_basics.arithmatic_sample import arithmetic_operations
+from hands_on_basics.arithmetic_sample import arithmetic_operations
 from hands_on_basics.shipping import shipping_problem
 
 choices = """
@@ -43,5 +43,4 @@ def pick_routine():
             pick_routine()
 
 
-print("calling pick routine from basics - ")
 pick_routine()
