@@ -1,3 +1,6 @@
+import pickle
+
+
 # Sample class definitions
 class SampleClass:
     """A Sample class"""
@@ -27,7 +30,7 @@ sample1 = SampleClass()
 
 # Data  attributes for class and instance objects spring into action when they are first assigned.
 # *** This applies to objects of type class and instance only, this does not apply to objects of built in types.
-sample1.z = 66 # If this line were to be commented, the print_sample would print the value of the class object's data
+sample1.z = 66  # If this line were to be commented, the print_sample would print the value of the class object's data
 # member z, which is 60.
 
 sample1.print_sample()
