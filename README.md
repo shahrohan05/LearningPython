@@ -7,5 +7,7 @@ References for some "getting started" and basic information:
 3. https://www.tutorialspoint.com/python/	
 4. https://en.wikipedia.org/wiki/Python_(programming_language)
 
-Reference for classes and object oriented programming in Python:
+
+Classes and object oriented programming in Python: [Class Examples](https://github.com/shahrohan05/LearningPython/tree/master/class_examples)	
+
 5. https://docs.python.org/3/tutorial/classes.html#classes
