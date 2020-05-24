@@ -15,6 +15,11 @@ class Dog:
         # list object for each instance of Dog class.
         # Commenting this would result in all instances referring to the class level "tricks" member
 
+        # Prefixed with _ members of an instance or class, although accessible from outside the class
+        # should be treated as non-public part of the API by the users of this class as this member
+        # is intended to be implementation detail subject to change without notice.
+        self._dog_secret = "DOG SECRET"
+
     # The first parameter "self" for class's member functions is a convention and has no other special meaning.
     # Changing the name of this parameter does not break the program, but following the convention of naming
     # the first parameter self is a good idea, since this makes the program more readable for other programmers
@@ -32,6 +37,10 @@ class Dog:
     def __call__(self, *args, **kwargs):
         print(dog_class)
         print("Dog name : %s, Type: %s, Tricks: %s" % (self.name,self.type,self.tricks))
+
+
+
+
 
 
 if __name__=="__main__":
@@ -56,6 +65,10 @@ if __name__=="__main__":
     # Each value is an object and therefore has a class(also called its type), which can be accessed as object.__class__
 
     print(tucker.__class__)
+
+    # _ prefixed private members are still accessible from outside the class,
+    # but is understood to be protected part of the API
+    print(tucker._dog_secret)
 
     # Abstraction or encapsulation, i.e. enforcing no instantiation and hiding implementation details
     # is not possible in pure python, but the same is achievable in Python implementation written in C.
