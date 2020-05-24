@@ -21,7 +21,7 @@ class GoldenRetriever(Dog):
 
     def __call__(self, *args, **kwargs):
         Dog.__call__(self)
-        print("Fur color : %s, Highlight Feature : %s" % (self.fur_color, self.highlight_feature))
+        print("GOLDEN R. Fur color : %s, Highlight Feature : %s" % (self.fur_color, self.highlight_feature))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 import pickle
 
+from poodle import print_dog
 
 # Sample class definitions
 class SampleClass:
@@ -53,3 +54,4 @@ print(test_function)
 # 2. Method - methods are essentially functions with first argument pre-filled with instance (self). This pre-filling
 # makes it a bound method. This is evident in SampleClass.print_sample(sample1) == sample1.print_sample()
 
+print_dog()

@@ -11,9 +11,9 @@ class Poodle(Dog):
 
     def __call__(self, *args, **kwargs):
         Dog.__call__(self)
-        print("Fur Color: %s, Highlight Feature : %s" % (self.fur_color, self.highlight_feature))
+        print("POODLE Fur Color: %s, Highlight Feature : %s" % (self.fur_color, self.highlight_feature))
 
 
 if __name__ == "__main__":
-    zinty = Poodle("Zinty", "Alert and Intelligent")
-    zinty()
+    Poodle("Zinty", "Alert and Intelligent")()
+
