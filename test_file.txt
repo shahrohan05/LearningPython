@@ -1,3 +1,2 @@
-Python is a fun to learn language!
-
- Uummm... one more thing, not having semicolons is a bit weird to be honest.
+abc;xyz;ddd;some other data
+new items;are new after all
