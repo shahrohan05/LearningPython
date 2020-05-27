@@ -11,6 +11,12 @@ queue = []
 # and the producer will wait to acquire the lock, while consumer holds the lock to peek an element from the queue.
 thread_lock = threading.Lock()
 
+# When GIL is in effect no two threads can execute in parallel to each other, only one thread can enter
+# the interpreter at a given point in time. That being said, the main benefit of multi-threading is that
+# it can be used to improve performance, when we are doing some IO operation or HTTP data syncing (network operation)
+# as during these pauses the GIL is released by the running thread which allows other threads to enter
+# the interpreter and thus makes more efficient use of processing resources.
+
 
 class Producer(threading.Thread):
 
@@ -23,7 +29,9 @@ class Producer(threading.Thread):
         while self.limit > 0:
             #print("producer waiting to acquire lock!")
             thread_lock.acquire()
-            time.sleep(1) # Simulated production delay
+            time.sleep(1)  # Simulated production delay, GIL is released during this time, for consumer to begin,
+            # but the consumer will still wait to acquire the thread_lock, which ensures consumer doesn't read,
+            # before anything is produced.
             queue.append(self.limit)
             print(queue)
             self.limit -= 1

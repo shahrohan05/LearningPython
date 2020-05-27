@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMPLOYEE REST API TEST</title>
+
+    <style>
+        #employeeApp {
+            width: 50%;
+        }
+        #employeeApp h3{
+            text-align: center;
+            font-family: sans-serif;
+            background: whitesmoke;
+            padding: 8px;
+            color: #455A64;
+            border-bottom: 1px solid;
+        }
+
+        #employeeApp ol {
+            font-family: sans-serif;
+        }
+
+        #employeeApp ol>li {
+            padding: 5px;
+            margin-bottom: 5px;
+            background: whitesmoke;
+        }
+
+        #employeeApp a {
+            text-decoration: none;
+            width: 100%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+        EmployeeApp = {};
+        EmployeeApp.xhttp = new XMLHttpRequest();
+        EmployeeApp.specificEmployee = () => {
+            window.open("http://127.0.0.1:5000/app/employee/"+prompt("Employee ID"));
+        };
+        EmployeeApp.createEmployee = () => {
+            EmployeeApp.xhttp.open("POST","http://127.0.0.1:5000/app/employee")
+            EmployeeApp.xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            EmployeeApp.xhttp.send("name="+prompt("Name:")+"&title="+prompt("Title:"))
+            alert("Request Submitted")
+        };
+        EmployeeApp.updateEmployee = () => {
+            EmployeeApp.xhttp.open("PUT","http://127.0.0.1:5000/app/employee/"+prompt("Employee ID"))
+            var payload = "name="+prompt("Name:")+"&title="+prompt("Title:")
+            EmployeeApp.xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            EmployeeApp.xhttp.send(payload)
+            alert("Request Submitted")
+        };
+
+        EmployeeApp.deleteEmployee = () => {
+            EmployeeApp.xhttp.open("DELETE","http://127.0.0.1:5000/app/employee/"+prompt("Employee ID"))
+            EmployeeApp.xhttp.send()
+            alert("Request Submitted")
+        }
+
+    </script>
+</head>
+<body>
+<div id="employeeApp">
+    <h3> EMPLOYEE REST API TEST </h3>
+    <ol>
+        <li><a href="http://127.0.0.1:5000/app/employee"> All Employees </a></li>
+        <li><a onclick = "EmployeeApp.specificEmployee()"> Specific Employee</a></li>
+        <li><a onclick="EmployeeApp.createEmployee()"> Create Employee </a></li>
+        <li><a onclick="EmployeeApp.updateEmployee()"> Update Employee </a></li>
+        <li><a onclick="EmployeeApp.deleteEmployee()"> Delete Employee </a></li>
+    </ol>
+</div>
+
+</body>
+</html>
