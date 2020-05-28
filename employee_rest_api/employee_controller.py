@@ -7,6 +7,7 @@ from flask import session
 
 from employee_service import Service
 
+
 app = Flask(__name__, template_folder="app_ui")
 
 service = Service()
