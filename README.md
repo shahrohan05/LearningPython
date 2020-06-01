@@ -16,3 +16,7 @@ REST web service with Flask:
 
 - https://dzone.com/articles/restful-web-services-with-python-flask
 
+Http client with with HttpLib2:
+
+- https://github.com/httplib2/httplib2
+
